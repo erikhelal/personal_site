@@ -464,6 +464,11 @@ pre {
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
+  @media (max-width: 991.98px) {
+    .container {
+      padding-top: 50px;
+    }
+  }
 
 .container-fluid {
   width: 100%;
@@ -8183,7 +8188,9 @@ h1, h2, h3, h4, h5,
   .ftco-navbar-light .container {
     width: 1110px;
     margin: 0 auto;
-    padding: 0; }
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; }
   .ftco-navbar-light .navbar-brand {
     color: #000000;
     padding-top: .7rem;
@@ -8287,7 +8294,9 @@ h1, h2, h3, h4, h5,
     padding-right: 0;
     text-transform: uppercase;
     font-size: 16px;
-    letter-spacing: .1em; }
+    letter-spacing: .1em; 
+    padding-top: 15px;
+    padding-bottom: 15px; }
     .ftco-navbar-light .navbar-toggler:hover, .ftco-navbar-light .navbar-toggler:focus {
       text-decoration: none;
       color: #3e64ff;
@@ -8464,6 +8473,11 @@ h1, h2, h3, h4, h5,
   right: 0;
   bottom: 120px;
   z-index: 2; }
+  @media (max-height: 700px) {
+    .mouse {
+      bottom: 50px;
+    }
+  }
 
 .mouse-icon {
   width: 70px;
@@ -9593,8 +9607,28 @@ textarea.form-control {
   background-size: cover;
   border-radius: 50%;
   display: inline-block;
-  margin-top: 75px;
-}
+  margin-top: 75px; }
+  @media (max-width: 991.98px) {
+    .headshot {
+      width: 150px;
+      height: 150px;
+      background: url('../static/headshot.jpg');
+      background-position: 50% 50%;
+      background-size: cover;
+      border-radius: 50%;
+      display: inline-block;
+      margin-top: 50px;
+    }
+  
+    .intro-carousel {
+      font-size: 1.5rem;
+    }
+    
+    .align-items-center {
+      align-items: normal !important;
+    }
+  }
+
 
 .motto-icon {
   width: 75px;

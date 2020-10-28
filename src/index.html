@@ -5,6 +5,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="css/dist/hamburgers.css" rel="stylesheet">
   <title>Ronaldo - Free Bootstrap 4 Template by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,9 +38,11 @@
   data-aos-duration="800" data-aos-delay="0">
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
-      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle hamburger hamburger--squeeze" type="button" data-toggle="collapse"
         data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav nav ml-auto">
@@ -61,7 +64,7 @@
           <div class="text text-center">
             <span class="subheading">Hey! I'm</span>
             <h1>Erik Helal</h1>
-            <h2>I'm a
+            <h2 class="intro-carousel">I'm a
               <span class="txt-rotate" data-period="750"
                 data-rotate="[ &quot;software developer.&quot;, &quot;language learner.&quot;, &quot;investor.&quot;, &quot;cat lover.&quot; ]"><span
                   class="wrap"></span></span>
@@ -293,15 +296,7 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
-
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
-  </script>
+>
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   <style type="text/css">
     .txt-rotate>.wrap {
