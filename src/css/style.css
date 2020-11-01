@@ -468,6 +468,9 @@ pre {
     .container {
       padding-top: 50px;
     }
+    #testimonial-section .container {
+      padding-bottom: 50px;
+    }
   }
 
 .container-fluid {
@@ -504,6 +507,11 @@ pre {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px; }
+
+  @media (max-width: 900px) {
+    .col-md-3 {
+      display: none; }
+  }
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -859,7 +867,7 @@ pre {
   .offset-sm-11 {
     margin-left: 91.66667%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .col-md {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -8723,8 +8731,8 @@ h1, h2, h3, h4, h5,
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 10px; }
   .resume-wrap .icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: white;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -8733,6 +8741,9 @@ h1, h2, h3, h4, h5,
     .resume-wrap .icon span {
       color: #fff;
       font-size: 28px; }
+    .resume-wrap .icon img {
+      max-height: 100%;
+      max-width: 100%; }
   .resume-wrap .text {
     width: calc(100% - 50px); }
   .resume-wrap .date {
@@ -9076,12 +9087,20 @@ textarea.form-control {
   .about-author .desc h3 {
     font-size: 24px; }
 
+#mottos-section {
+  padding-top: 0;
+}
+
+#page-3 {
+  margin-bottom: 0;
+}
+
 .ftco-section {
   padding: 7em 0;
   position: relative; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 900px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 0em 0; } }
 
 .ftco-no-pt {
   padding-top: 0 !important; }

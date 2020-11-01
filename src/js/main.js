@@ -42,23 +42,32 @@
    // Burger Menu
 	var burgerMenu = function() {
 
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-
-			event.preventDefault();
+		$('body').on('click', '.js-fh5co-nav-toggle', function(){
 
 			if ( $('#ftco-nav').is(':visible') ) {
 				$(this).removeClass('active');
+				$(this).removeClass('is-active');
+				$('.mouse').show();
 			} else {
 				$(this).addClass('active');	
-			}
-
-			
+				$(this).addClass('is-active');
+				$('.mouse').hide();
+			}			
 			
 		});
 
 	};
 	burgerMenu();
 
+	//Nav link
+	var navLink = function() {
+		$('.nav-link').on('click', function() {
+			if ($(document).width() < 991.98) {
+				$('.js-fh5co-nav-toggle').trigger('click');
+			}
+		});
+	}
+	navLink();
 
 	var onePageClick = function() {
 

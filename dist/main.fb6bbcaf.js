@@ -155,18 +155,30 @@ AOS.init({
   loader(); // Burger Menu
 
   var burgerMenu = function burgerMenu() {
-    $('body').on('click', '.js-fh5co-nav-toggle', function (event) {
-      event.preventDefault();
-
+    $('body').on('click', '.js-fh5co-nav-toggle', function () {
       if ($('#ftco-nav').is(':visible')) {
         $(this).removeClass('active');
+        $(this).removeClass('is-active');
+        $('.mouse').show();
       } else {
         $(this).addClass('active');
+        $(this).addClass('is-active');
+        $('.mouse').hide();
       }
     });
   };
 
-  burgerMenu();
+  burgerMenu(); //Nav link
+
+  var navLink = function navLink() {
+    $('.nav-link').on('click', function () {
+      if ($(document).width() < 991.98) {
+        $('.js-fh5co-nav-toggle').trigger('click');
+      }
+    });
+  };
+
+  navLink();
 
   var onePageClick = function onePageClick() {
     $(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
@@ -501,7 +513,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37363" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41325" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
