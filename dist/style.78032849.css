@@ -8476,14 +8476,14 @@ h1, h2, h3, h4, h5,
   font-size: 60px; }
 
 .mouse {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
-  bottom: 120px;
+  bottom: 100px;
   z-index: 2; }
-  @media (max-height: 700px) {
+  @media (max-width: 900px) {
     .mouse {
-      bottom: 50px;
+      bottom: 200px;
     }
   }
 
@@ -9669,7 +9669,6 @@ textarea.form-control {
   background-image: url('/photon.e611d01a.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center
 }
 

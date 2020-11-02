@@ -87,6 +87,41 @@
 	};
 
 	onePageClick();
+
+	//Scroll thing overlap detection
+	var overlap = function() {
+		function isOverlap(idOne,idTwo){
+			var objOne=$(idOne),
+				objTwo=$(idTwo),
+				offsetOne = objOne.offset(),
+				offsetTwo = objTwo.offset(),
+				topOne=offsetOne.top,
+				topTwo=offsetTwo.top,
+				leftOne=offsetOne.left,
+				leftTwo=offsetTwo.left,
+				widthOne = objOne.width(),
+				widthTwo = objTwo.width(),
+				heightOne = objOne.height(),
+				heightTwo = objTwo.height();
+			var leftTop = leftTwo > leftOne && leftTwo < leftOne+widthOne                  && topTwo > topOne && topTwo < topOne+heightOne,             rightTop = leftTwo+widthTwo > leftOne && leftTwo+widthTwo < leftOne+widthOne                  && topTwo > topOne && topTwo < topOne+heightOne,             leftBottom = leftTwo > leftOne && leftTwo < leftOne+widthOne                  && topTwo+heightTwo > topOne && topTwo+heightTwo < topOne+heightOne,             rightBottom = leftTwo+widthTwo > leftOne && leftTwo+widthTwo < leftOne+widthOne                  && topTwo+heightTwo > topOne && topTwo+heightTwo < topOne+heightOne;
+			return leftTop || rightTop || leftBottom || rightBottom;
+		}
+
+		function overlappingLogic() {
+			if (isOverlap('#mouse', '#headshot')) {
+				console.log('caca');
+				$('#mouse').css('visibility', 'hidden');
+			} else {
+				console.log('caca2');
+				$('#mouse').css('visibility', 'visible');
+			}
+		}
+
+		$(document).on('ready', overlappingLogic)
+		$(window).on('resize', overlappingLogic);
+	}
+
+	overlap();
 	
 
 	var carousel = function() {
