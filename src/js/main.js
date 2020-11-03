@@ -109,10 +109,8 @@
 
 		function overlappingLogic() {
 			if (isOverlap('#mouse', '#headshot')) {
-				console.log('caca');
 				$('#mouse').css('visibility', 'hidden');
 			} else {
-				console.log('caca2');
 				$('#mouse').css('visibility', 'visible');
 			}
 		}
