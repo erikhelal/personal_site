@@ -5552,6 +5552,11 @@ button.bg-dark:focus {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
+  @media (max-width: 600px) {
+    .d-flex {
+      display: inherit !important;
+    }
+  }
 
 .d-inline-flex {
   display: -webkit-inline-box !important;
@@ -6745,6 +6750,9 @@ button.bg-dark:focus {
 .pl-3,
 .px-3 {
   padding-left: 1rem !important; }
+  @media (max-width: 600px) {
+    .pl-3, .px-3 {
+      padding-left: 0 !important; } }
 
 .p-4 {
   padding: 1.5rem !important; }
@@ -8724,6 +8732,13 @@ h1, h2, h3, h4, h5,
     font-size: 30px;
     margin-bottom: 30px;
     color: #3e64ff; }
+    @media (max-width: 600px) {
+      .page .heading {
+        text-align: center; } }
+
+@media (max-width: 600px) {
+  .title-block {
+    text-align: center; } }
 
 .resume-wrap {
   width: 100%;
@@ -8738,6 +8753,9 @@ h1, h2, h3, h4, h5,
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%; }
+    @media (max-width: 600px) {
+      .resume-wrap .icon {
+        margin: 0 auto; } }
     .resume-wrap .icon span {
       color: #fff;
       font-size: 28px; }
@@ -8746,6 +8764,9 @@ h1, h2, h3, h4, h5,
       max-width: 100%; }
   .resume-wrap .text {
     width: calc(100% - 50px); }
+    @media (max-width: 600px) {
+      .resume-wrap .text {
+        width: 100%; } }
   .resume-wrap .date {
     font-weight: 700;
     font-size: 16px;
