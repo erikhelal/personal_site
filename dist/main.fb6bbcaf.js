@@ -197,29 +197,14 @@ AOS.init({
     function isOverlap(idOne, idTwo) {
       var objOne = $(idOne),
           objTwo = $(idTwo),
-          offsetOne = objOne.offset(),
-          offsetTwo = objTwo.offset(),
-          topOne = offsetOne.top,
-          topTwo = offsetTwo.top,
-          leftOne = offsetOne.left,
-          leftTwo = offsetTwo.left,
-          widthOne = objOne.width(),
-          widthTwo = objTwo.width(),
-          heightOne = objOne.height(),
-          heightTwo = objTwo.height();
-      var leftTop = leftTwo > leftOne && leftTwo < leftOne + widthOne && topTwo > topOne && topTwo < topOne + heightOne,
-          rightTop = leftTwo + widthTwo > leftOne && leftTwo + widthTwo < leftOne + widthOne && topTwo > topOne && topTwo < topOne + heightOne,
-          leftBottom = leftTwo > leftOne && leftTwo < leftOne + widthOne && topTwo + heightTwo > topOne && topTwo + heightTwo < topOne + heightOne,
-          rightBottom = leftTwo + widthTwo > leftOne && leftTwo + widthTwo < leftOne + widthOne && topTwo + heightTwo > topOne && topTwo + heightTwo < topOne + heightOne;
-      return leftTop || rightTop || leftBottom || rightBottom;
+          bottomTwo = objTwo.offset().top + objTwo.height();
+      return objOne.offset().top - 20 < bottomTwo;
     }
 
     function overlappingLogic() {
       if (isOverlap('#mouse', '#headshot')) {
-        console.log('caca');
         $('#mouse').css('visibility', 'hidden');
       } else {
-        console.log('caca2');
         $('#mouse').css('visibility', 'visible');
       }
     }
@@ -550,7 +535,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41483" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34165" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
