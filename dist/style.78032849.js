@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\static\\headshot.jpg":[["headshot.ba6939d4.jpg","static/headshot.jpg"],"static/headshot.jpg"],"./..\\static\\ant.png":[["ant.76dcde1b.png","static/ant.png"],"static/ant.png"],"./..\\static\\sisyphus.png":[["sisyphus.940e8bf1.png","static/sisyphus.png"],"static/sisyphus.png"],"./..\\static\\photon.png":[["photon.e611d01a.png","static/photon.png"],"static/photon.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../static/headshot.jpg":[["headshot.ba6939d4.jpg","static/headshot.jpg"],"static/headshot.jpg"],"./../static/ant.png":[["ant.76dcde1b.png","static/ant.png"],"static/ant.png"],"./../static/sisyphus.png":[["sisyphus.940e8bf1.png","static/sisyphus.png"],"static/sisyphus.png"],"./../static/photon.png":[["photon.e611d01a.png","static/photon.png"],"static/photon.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53870" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39697" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
